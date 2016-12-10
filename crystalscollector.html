@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<div id="random"></div>
+<button id="green"></button>
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script type="text/javascript">
+var randomNumber = 0;
+
+function TargetNumber(){
+	randomNumber = Math.floor(Math.random()*120)+19;
+	console.log(this.randomNumber)
+	}
+	TargetNumber();
+	$("#random").append(randomNumber);
+
+var button1Num = Math.floor(Math.random()*12)+1;
+var button1 = $('<button>').data(button1Num);
+
+</script>
+
+then you can do var button1 = $(’<button>’).data(button1Num)
+
+  
+let’s say your random number was 5, that would get saved in a variable called button1Num
+
+
+then if you did $(’<button>’).data(‘number’, button1Num) (edited)
+
+  
+there would be a data-number = “5"
+
+  
+so the button element would look like <button data-number=”5”></button> (edited)
+
+  
+then to get that value of data-number, you do $(‘button’).data(‘number’)
+ 
+the example does all of this, refer to this
+
+
+
+
+
+</body>
+
+
+
+</html>
