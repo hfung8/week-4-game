@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<div id="random"></div>
+<div id="addthemup">0</div>
+<button id="green">?</button>
+<button id="blue">?</button>
+<button id="red">?</button>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script type="text/javascript">
+var randomNumber = 0;
+var addthemup = 0;
+
+function TargetNumber(){
+	randomNumber = Math.floor(Math.random()*102)+19;
+	console.log(this.randomNumber)
+	}
+	TargetNumber();
+	$("#random").append(randomNumber);
+
+var button1Num = Math.floor(Math.random()*12)+1;
+var button1 = $('button#green');
+$.data(button1,"number",button1Num);
+$(button1).click(function(){
+	addthemup += $.data(button1,"number");
+	$("#addthemup").text(addthemup);
+	checkaddthemup();
+});
+
+var button2Num = Math.floor(Math.random()*12)+1;
+var button2 = $('button#blue');
+$.data(button2,"number",button2Num);
+$(button2).click(function(){
+	addthemup += $.data(button2,"number");
+	$("#addthemup").text(addthemup);
+	checkaddthemup();
+});
+
+var button3Num = Math.floor(Math.random()*12)+1;
+var button3 = $('button#red');
+$.data(button3,"number",button3Num);
+$(button3).click(function(){
+	addthemup += $.data(button3,"number");
+	$("#addthemup").text(addthemup);
+	checkaddthemup();
+});
+
+function checkaddthemup (){
+	if (addthemup === randomNumber) {
+		//win condition
+		alert("you win!")
+	} else if (addthemup > randomNumber) {
+		//lose condition
+		alert("you lose...")
+	}
+}
+
+
+</script>
+</body>
+</html>
