@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<h1></h1>
+<div id="random"></div>
+
+<button></button>
+<span>
+<!-- <button id="button"><img src="assets/images/crystal_2.jpg" width="200" height="200" value="button2"></button>
+<button id="button"><img src="assets/images/crystal_3.jpg" width="200" height="200" value="button3"></button>
+<button id="button"><img src="assets/images/crystal_4.jpg" width="200" height="200" value="button4"></button> -->
+
+<input id="random-number" value=""/>
+<p><span id="total"></span><p>
+<p><span id="buttontotal"></span></p>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+<script type="text/javascript">
+// Keep buttons object to associate each button with a random number
+// Before associating each button with a random number,
+//   check to make sure it doesn't have already have one
+
+var randomNumber;
+var randomNumbers;
+var values = [];
+// var button = 0;
+// var buttons = {
+// 	button1 : 0,
+// 	button2 : 0,
+// 	button3 : 0,
+// 	button4 : 0,
+// };
+		function randomNumber () {
+		randomNumber = Math.floor(Math.random()*120)+19;
+		console.log(this.randomNumber)
+		}
+		randomNumber();
+
+		$("#random").append(randomNumber);
+
+		var buttontotal;
+		var button1Num = Math.floor(Math.random()*12)+1;
+		var button1 = $('<button>').data(button1Num);
+		console.log(button1);
+		$('<button>').data('number',button1Num);
+		// button.data(‘firstbutton’)
+	// 	function getRandomNumber(){
+	// 		$("button").on("click", function () {
+	// 		randomNumbers = Math.floor(Math.random()*12) + 1;
+	// 		$("#total").append(randomNumbers)
+	// 	})
+	// }	
+	// 	if (buttons.buttonid = true){
+	// 		getRandomNumber();
+	// 		$("#buttontotal").append(buttontotal)
+	// 	}
+		
+
+
+		// $("#button1").click(function (){
+		// 	button1 = Math.floor(Math.random()*12) + 1;
+		// 	console.log(button1)
+		// })
+
+		// $("button2").click(function(){
+		// 	button2 = Math.floor(Math.random()*12) + 1;
+		// 	console.log(button2)
+		// })
+		
+
+		// function keepsame(){
+		// 	$("button").on("click", function (){
+			
+		// 	})
+		// }
+	
+		// 	// if buttonid = true, usually the buttons is assigned a false value. 
+
+		// 	// if ($(this)has("value") && !button){
+		// 	// 	buttons.buttonid = true
+		// 	// }
+
+		// 	// } 
+		// 		// $(this)
+  // 		// 	    if clicked 
+		// 		randomNumbers = Math.floor(Math.random()*12) + 1;
+		// 		$("#random-numbers").append(randomNumbers);
+		// })
+		// 	getRandomNumber();
+			
+				
+
+
+
+				// console.log(randomNumbers);
+				// values.push(randomNumbers);
+				// document.getElementById(random-numbers).innerHTML = randomNumbers;
+				// buttons.buttonid = true
+
+		// getRandomNumber();
+		// $("button").on("click", function() {
+		// 	console.log(button.value);
+		// })
+
+		// console.log(Object.values(buttons))
+</script>
+</body>
+</html>
